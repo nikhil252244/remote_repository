@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>RetriveData</title>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        color: red;
+    }
+    h1{color: hotpink}
+    th{
+        color: seagreen;
+        font-family: "Roboto", "Lucida Grande",Verdana,  Arial, sans-serif;
+    }
+    a{text-underline: darkslateblue}
+</style>
+<body>
+{% if Data %}
+    <center><h1>Retrive Data</h1></center>
+<table class="table  table-border">
+    <thead>
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Cost</th>
+        <th>Product Class</th>
+        <th>no of products</th>
+        <th>Customer Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Manfacturing Date</th>
+        <th>Expiry Date</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for i in Data %}
+            <tr>
+            <td>{{ i.product_id }}</td>
+            <td>{{ i.product_name }}</td>
+            <td>{{ i.product_cost }}</td>
+            <td>{{ i.Product_class }}</td>
+            <td>{{ i.no_of_products }}</td>
+            <td>{{ i.customer_name }}</td>
+            <td>{{ i.mobile }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.manufacture_date}}</td>
+            <td>{{ i.expiry_date }}</td>
+            </tr>
+
+    </tbody>
+        {% endfor %}
+</table>
+{% else %}
+    <h2>Data Is Not Available</h2>
+{% endif %}
+<a href=/home/>goto home page</a>
+</body>
+</html>

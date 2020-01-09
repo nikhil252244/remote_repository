@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>CreateForm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        color: darkslateblue;
+    }
+    #a1{color: brown}
+    #a12{
+        color: orange;
+        font-family: cursive;
+    }
+    #a13{
+        color: green;
+        font-family: Centaur;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="post">
+                <h2>Please Enter Product Details</h2>
+                {% csrf_token %}
+                <label id="a1" class="cls1">enter product ID</label>
+                <input type="number" name="product_id" class="form-control" required>
+                <label id="a1" class="cls1">enter product name</label>
+                <input type="text" name="product_name" class="form-control">
+                <label id="a1" class="cls1">enter product cost</label>
+                <input type="number" name="product_cost" class="form-control">
+                <label id="a12" class="cls1">enter product class</label>
+                <input type="text" name="product_class" class="form-control" value="high" readonly>
+                <label id="a12" class="cls1">enter no of products</label>
+                <input type="number" name="no_of_products" class="form-control">
+                <label id="a12" class="cls1">enter manfacturing date</label>
+                <input type="date" name="manfacturing_date" class="form-control">
+                <label id="a13" class="cls1">enter expiry date</label>
+                <input type="date" name="expiry_date" class="form-control">
+                <label id="a13" class="cls1">enter customer name</label>
+                <input type="text" name="customer_name" class="form-control">
+                <label id="a13" class="cls1">enter customer mobile number</label>
+                <input type="number" name="mobile" class="form-control">
+                <label id="a13" class="cls1">enter customer email id</label>
+                <input type="email" name="email" class="form-control">
+                <center>
+                <input type="submit" value="signup" class="btn btn-success">
+                <input type="reset" value="clear" class="btn btn-danger">
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+</form>
+</body>
+</html>
